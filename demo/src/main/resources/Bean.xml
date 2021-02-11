@@ -1,0 +1,47 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id = "helloWorld" class = "com.springBootTest.first.demo.HelloWorld"  init-method = "init" destroy-method = "destroy" >
+        <property name = "message" value = "Hello World!"/>
+    </bean>
+    <bean id = "Texty"  class="com.springBootTest.first.demo.TestEditor">
+        <property name="sc">
+            <bean id = "spellCheker" class="com.springBootTest.first.demo.SpellChecker"/>
+        </property>
+        
+    </bean>
+    <bean class = "com.springBootTest.first.demo.InitHelloWorld" />
+
+</beans>
+
+        <!--
+
+<property name = "addressList">
+<list>
+    <ref bean = "address1"/>
+    <ref bean = "address2"/>
+    <value>Pakistan</value>
+</list>
+</property>
+
+<property name = "addressSet">
+<set>
+    <ref bean = "address1"/>
+    <ref bean = "address2"/>
+    <value>Pakistan</value>
+</set>
+</property>
+
+<property name = "addressMap">
+<map>
+    <entry key = "one" value = "INDIA"/>
+    <entry key = "two" value-ref = "address1"/>
+    <entry key = "three" value-ref = "address2"/>
+</map>
+</property>
+        </bean>
+        -->
